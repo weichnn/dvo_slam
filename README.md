@@ -22,19 +22,14 @@ These packages provide an implementation of the rigid body motion estimation of 
     
  *  **sophus**
     
-    ROS package wrapper for Hauke Strasdat's Sophus library, see https://github.com/strasdat/Sophus.
+    ROS package wrapper for Hauke Strasdat's Sophus library, see https://github.com/strasdat/Sophus. Indigo version could be installed by apt-get.
     
 
 ## Installation
 
-Checkout the branch for your ROS version into a folder in your `ROS_PACKAGE_PATH` and build the packages with `rosmake`.
+Checkout the branch for your ROS version into a folder in your `ROS_PACKAGE_PATH` and build the packages with `rosmake` or `catkin_make`.
 
- *  ROS Fuerte:
-    
-    ```bash
-    git clone -b fuerte git://github.com/tum-vision/dvo_slam.git
-    rosmake dvo_core dvo_ros dvo_slam dvo_benchmark
-    ```
+
 
 ## Usage
 
