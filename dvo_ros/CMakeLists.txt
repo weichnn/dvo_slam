@@ -4,7 +4,7 @@ project(dvo_ros)
 
 find_package(catkin REQUIRED COMPONENTS roscpp tf tf_conversions eigen_conversions dynamic_reconfigure dvo_core sensor_msgs image_transport message_filters cv_bridge visualization_msgs interactive_markers pcl_ros)
 find_package(cmake_modules REQUIRED)
-find_package(PCL REQUIRED COMPONENTS common)
+find_package(PCL REQUIRED COMPONENTS common io visualization filters)
 find_package(Eigen3 REQUIRED)
 #find_package(sophus REQUIRED)
 #find_package(Boost REQUIRED thread)

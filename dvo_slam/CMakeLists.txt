@@ -7,19 +7,20 @@ LIST(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
 find_package(catkin REQUIRED COMPONENTS roscpp dynamic_reconfigure dvo_core dvo_ros sensor_msgs image_transport message_filters cv_bridge visualization_msgs interactive_markers)
 find_package(cmake_modules REQUIRED)
 find_package(Eigen3 REQUIRED)
-find_package(G2O REQUIRED)
 find_package(SuiteSparse REQUIRED)
+find_package(G2O REQUIRED)
 #find_package(sophus REQUIRED)
 #find_package(Boost REQUIRED thread)
 find_package(OpenCV 2.4.8 REQUIRED)
 find_package(TBB REQUIRED)
+find_package(PCL REQUIRED COMPONENTS common io visualization filters)
 
 #LIST(APPEND CMAKE_CXX_FLAGS "-std=c++11")
 
 IF(G2O_FOUND)
-message(STATUS "found g2o ${G2O_FOUND}")
+message(STATUS " found g2o ${G2O_FOUND}")
 ELSE()
-message(ERROR "g2o missing")
+message(ERROR " g2o missing")
 ENDIF()
 
 # dynamic reconfigure

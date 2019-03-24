@@ -9,7 +9,7 @@ find_package(cmake_modules REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(G2O REQUIRED)
 find_package(OpenCV 2.4.8 REQUIRED)
-
+find_package(PCL REQUIRED COMPONENTS common io visualization filters)
 #LIST(APPEND CMAKE_CXX_FLAGS "-std=c++11")
 
 catkin_package(
@@ -24,6 +24,11 @@ include_directories(
   ${G2O_INCLUDE_DIR}
 )
 
+IF(G2O_FOUND)
+message(STATUS " found g2o ${G2O_FOUND}")
+ELSE()
+message(ERROR " g2o missing")
+ENDIF()
 
 add_executable(benchmark
      src/benchmark_slam.cpp
